@@ -1,54 +1,398 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css>
-
     <meta charset="UTF-8">
-    <title>TRUONGGIANG SHOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TRUONGGIANG SHOP - Chuyên kinh doanh thực phẩm đông lạnh chất lượng cao">
+    <meta name="keywords" content="thực phẩm đông lạnh, gà, bò viên, cá viên, Đồng Tháp">
+    <meta name="author" content="TRUONGGIANG SHOP">
+    <meta name="theme-color" content="#667eea">
+    <title>TRUONGGIANG SHOP - Thực Phẩm Đông Lạnh Chất Lượng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9WMXNPT+FprTrrND9HlYnvnKapucVLZ520fcwFNble6NjWBNMgxLx7RzQzoBg+2StMQlAaddNdeXqO8A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="left">
-      <h1>WELCOME TO<br>TRUONGGIANG SHOP 👋</h1>
-
-      <div class="section">
-        <h2>Giới thiệu</h2>
-        <p>
-          TRUONGGIANG SHOP chuyên kinh doanh các loại thực phẩm đông lạnh.
-        </p>
-        <p>
-          Địa chỉ: Phía sau KCN Tân Hương (Tổ 11, Ấp Tân Thuận, Xã Tân Hương, Tỉnh Đồng Tháp)
-        </p>
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="logo">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>TRUONGGIANG SHOP</span>
       </div>
+      <div class="nav-right">
+        <a href="#cart" class="nav-link" id="cartLink" title="Xem giỏ hàng">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+        </a>
+        <a href="#orders" class="nav-link" id="ordersLink" title="Xem đơn hàng của bạn">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <span class="order-badge" id="orderBadge" style="display: none;">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-      <div class="section">
-        <h2>Sản phẩm</h2>
-        <ul>
-          <li>Cánh gà</li>
-          <li>Đùi gà</li>
-          <li>Chân gà rút xương</li>
-          <li>Bò viên, cá viên</li>
-          <li>Thực phẩm đông lạnh các loại</li>
-        </ul>
+  <main class="container">
+    <section class="left">
+      <h1>Chào mừng đến<br><strong>TRUONGGIANG SHOP</strong> 👋</h1>
+
+      <article class="section">
+        <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Giới thiệu</h2>
+        <p>
+          TRUONGGIANG SHOP chuyên kinh doanh các loại thực phẩm đông lạnh chất lượng cao, tươi mới, đáp ứng nhu cầu của khách hàng.
+        </p>
+        <p>
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>Địa chỉ:</strong> Phía sau KCN Tân Hương (Tổ 11, Ấp Tân Thuận, Xã Tân Hương, Tỉnh Đồng Tháp)
+        </p>
+      </article>
+
+      <article class="section">
+        <h2><i class="fa-solid fa-box" aria-hidden="true"></i> Sản phẩm</h2>
+        <p style="color: #666; margin-bottom: 1.5rem;">Các sản phẩm thực phẩm đông lạnh chất lượng cao, được chọn lọc kỹ lưỡng và bảo quản tốt nhất.</p>
+        <div class="product-grid">
+          <button class="product-card" data-product="canh-ga" title="Xem chi tiết Cánh gà">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=250&h=250&fit=crop" alt="Cánh gà">
+            </div>
+            <div class="product-card-info">
+              <h3>Cánh gà</h3>
+              <p class="product-price">45.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+
+          <button class="product-card" data-product="dui-ga" title="Xem chi tiết Đùi gà">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1585238341710-4dd0ddf3de5e?w=250&h=250&fit=crop" alt="Đùi gà">
+            </div>
+            <div class="product-card-info">
+              <h3>Đùi gà</h3>
+              <p class="product-price">52.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+
+          <button class="product-card" data-product="chan-ga" title="Xem chi tiết Chân gà rút xương">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1598694932816-b6a9f2b4e6f4?w=250&h=250&fit=crop" alt="Chân gà rút xương">
+            </div>
+            <div class="product-card-info">
+              <h3>Chân gà</h3>
+              <p class="product-price">38.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+
+          <button class="product-card" data-product="vien-bo-ca" title="Xem chi tiết Bò viên, cá viên">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=250&h=250&fit=crop" alt="Bò viên, cá viên">
+            </div>
+            <div class="product-card-info">
+              <h3>Bò viên & Cá viên</h3>
+              <p class="product-price">55.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+
+          <button class="product-card" data-product="cua-bien" title="Xem chi tiết Cua biển">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=250&h=250&fit=crop" alt="Cua biển">
+              <span class="product-badge badge-hot">🔥 HOT</span>
+            </div>
+            <div class="product-card-info">
+              <h3>Cua Biển</h3>
+              <p class="product-price">280.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+
+          <button class="product-card" data-product="khac" title="Xem chi tiết Thực phẩm khác">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1599599810694-b3a7dd64d54b?w=250&h=250&fit=crop" alt="Thực phẩm đông lạnh khác">
+            </div>
+            <div class="product-card-info">
+              <h3>Thực phẩm khác</h3>
+              <p class="product-price">Liên hệ</p>
+              <span class="product-unit">Tùy sản phẩm</span>
+            </div>
+          </button>
+        </div>
+      </article>
+ why-choose">
+        <h2><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Tại Sao Chọn TRUONGGIANG SHOP?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h3>Chất Lượng Tuyệt Vời</h3>
+            <p>Sản phẩm được kiểm tra kỹ lưỡng, đạt tiêu chuẩn vệ sinh an toàn thực phẩm.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-snowflake"></i>
+            </div>
+            <h3>Đông Lạnh Nhanh</h3>
+            <p>Được đông lạnh nhanh chóng để bảo quản độ tươi và chất lượng tự nhiên.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <h3>Giao Hàng Nhanh</h3>
+            <p>Phục vụ các quán ăn, nhà hàng, cửa hàng với giao hàng linh hoạt.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3>Hỗ Trợ Tốt</h3>
+            <p>Luôn sẵn sàng tư vấn và hỗ trợ khách hàng với giá cạnh tranh nhất.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="section">
+        <h2><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Đánh Giá Từ Khách Hàng</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Sản phẩm rất tươi ngon, giao hàng nhanh. Cửa hàng có tư vấn rất tốt!"</p>
+            <div class="testimonial-author">- Quán ăn Hoàng Hương</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Đã hợp tác lâu dài, luôn hài lòng với chất lượng và dịch vụ."</p>
+            <div class="testimonial-author">- Nhà hàng Sông Tiền</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Giá cạnh tranh, sản phẩm đa dạng. Rất thích hợp cho kinh doanh!"</p>
+            <div class="testimonial-author">- Cửa hàng thực phẩm Minh Khai</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="section
+      <article class="section">
+        <h2><i class="fa-solid fa-bug" aria-hidden="true"></i> Dế Đông Lạnh</h2>
+        <p style="color: #666; margin-bottom: 1.5rem;">Các loại dế đông lạnh chất lượng cao, giàu dinh dưỡng, lý tưởng cho các nhà hàng cao cấp và những người yêu thích thực phẩm hiếm.</p>
+        <div class="product-grid">
+          <button class="product-card" data-product="de-canh" title="Xem chi tiết Dế cánh đông lạnh">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1597624046017-85e9cd4cbf53?w=250&h=250&fit=crop" alt="Dế cánh đông lạnh">
+            </div>
+            <div class="product-card-info">
+              <h3>Dế Cánh</h3>
+              <p class="product-price">75.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+
+          <button class="product-card" data-product="de-sua" title="Xem chi tiết Dế sữa đông lạnh">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1571407614862-ec05e298e0d7?w=250&h=250&fit=crop" alt="Dế sữa đông lạnh">
+            </div>
+            <div class="product-card-info">
+              <h3>Dế Sữa</h3>
+              <p class="product-price">95.000 đ</p>
+              <span class="product-unit">/kg</span>
+            </div>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <aside class="right">
+      <img src="https://images.unsplash.com/photo-1599599810694-b3a7dd64d54b?w=200&h=200&fit=crop" alt="Logo TRUONGGIANG SHOP" class="shop-avatar">
+
+      <article class="section contact">
+        <h2><i class="fa-solid fa-address-card" aria-hidden="true"></i> Liên hệ</h2>
+
+        <p>
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <a href="mailto:ntg.truonggiang99@gmail.com" class="contact-link">ntg.truonggiang99@gmail.com</a>
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <a href="tel:0989865054" class="contact-link">0989 86 50 54</a>
+        </p>
+      </article>
+      
+      <a href="tel:0989865054" class="btn-call" title="Gọi cho cửa hàng ngay">
+        <i class="fa-solid fa-phone"></i> Gọi ngay
+      </a>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 TRUONGGIANG SHOP. Tất cả quyền được bảo lưu.</p>
+  </footer>
+
+  <!-- Modal Chi Tiết Sản Phẩm -->
+  <div id="productModal" class="modal" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Đóng chi tiết sản phẩm">&times;</button>
+      <div class="modal-body">
+        <div class="product-image">
+          <img id="productImg" src="" alt="Hình ảnh sản phẩm">
+          <div class="image-nav" id="imageNav"></div>
+        </div>
+        <div class="product-info">
+          <h2 id="productTitle"></h2>
+          <p id="productDescription"></p>
+          <div class="product-details">
+            <div class="detail-item">
+              <span class="label">Giá:</span>
+              <span id="productPrice" class="price"></span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Đơn vị:</span>
+              <span id="productUnit"></span>
+            </div>
+          </div>
+          <p id="productNote" class="note"></p>
+          <button class="btn-contact" id="contactBtn" title="Thêm vào giỏ hàng">
+            <i class="fa-solid fa-shopping-cart"></i> Thêm vào giỏ
+          </button>
+        </div>
       </div>
     </div>
+  </div>
 
-<div class="right">
-  <img src="avatar.jpg" alt="Ảnh đại diện">
+  <!-- Modal Đặt Hàng -->
+  <div id="orderModal" class="modal" role="dialog" aria-labelledby="orderTitle" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Đóng form đặt hàng">&times;</button>
+      <div class="modal-body order-modal-body">
+        <h2 id="orderTitle" style="color: #667eea; margin-top: 0;">📋 Form Đặt Hàng</h2>
+        
+        <div class="order-info">
+          <p><strong>Sản phẩm:</strong> <span id="orderProductName"></span></p>
+          <p><strong>Giá:</strong> <span id="orderProductPrice"></span></p>
+        </div>
 
-<div class="section contact">
-  <h2><i class="fa-solid fa-address-card"></i> Liên hệ</h2>
+        <form id="orderForm" class="order-form">
+          <div class="form-group">
+            <label for="customerName">Tên khách hàng <span class="required">*</span></label>
+            <input type="text" id="customerName" name="customerName" required placeholder="Nhập tên của bạn">
+          </div>
 
-  <p>
-    <i class="fa-solid fa-envelope"></i>
-    ntg.truonggiang99@gmail.com
-  </p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customerPhone">Số điện thoại <span class="required">*</span></label>
+              <input type="tel" id="customerPhone" name="customerPhone" required placeholder="0989 86 50 54">
+            </div>
+            <div class="form-group">
+              <label for="customerEmail">Email</label>
+              <input type="email" id="customerEmail" name="customerEmail" placeholder="example@gmail.com">
+            </div>
+          </div>
 
-  <p>
-    <i class="fa-solid fa-phone"></i>
-    0989 86 50 54
-  </p>
-</div>
-<a href="tel:0989865054" class="btn-call">📞 Gọi ngay</a>
+          <div class="form-group">
+            <label for="customerAddress">Địa chỉ giao hàng <span class="required">*</span></label>
+            <textarea id="customerAddress" name="customerAddress" required placeholder="Nhập địa chỉ giao hàng" rows="2"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantity">Số lượng <span class="required">*</span></label>
+              <input type="number" id="quantity" name="quantity" required min="1" value="1" placeholder="1">
+            </div>
+            <div class="form-group">
+              <label for="unit">Đơn vị</label>
+              <input type="text" id="unit" name="unit" readonly>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="orderNote">Ghi chú thêm</label>
+            <textarea id="orderNote" name="orderNote" placeholder="Ví dụ: Giao vào buổi sáng, cắt nhỏ, v.v..." rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+              Tôi đồng ý với điều khoản dịch vụ
+            </label>
+          </div>
+
+          <div class="order-actions">
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-check"></i> Xác nhận đặt hàng
+            </button>
+            <button type="button" class="btn-cancel" id="cancelOrderBtn">
+              <i class="fa-solid fa-times"></i> Hủy
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="notification" class="notification" role="alert">
+    <div class="notification-content">
+      <span id="notificationMessage"></span>
+      <button class="notification-close">&times;</button>
+    </div>
+  </div>
+
+  <!-- Modal Giỏ Hàng -->
+  <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="modal-content" style="max-width: 800px;">
+      <button class="modal-close" aria-label="Đóng giỏ hàng"></button>
+      <div class="modal-body cart-modal-body">
+        <h2 id="cartTitle" style="color: #667eea; margin-top: 0;">🛒 Giỏ Hàng</h2>
+        
+        <div id="cartEmpty" class="empty-message">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <p>Giỏ hàng trống</p>
+        </div>
+        
+        <div id="cartItems" class="cart-items"></div>
+        
+        <div id="cartSummary" class="cart-summary" style="display: none;">
+          <div class="summary-row">
+            <span>Tổng sản phẩm:</span>
+            <span id="totalItems">0</span>
+          </div>
+          <div class="summary-row">
+            <span>Ghi chú đơn hàng:</span>
+          </div>
+          <textarea id="cartNote" placeholder="Nhập ghi chú chung cho tất cả sản phẩm" rows="3" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;"></textarea>
+          <div class="cart-actions">
+            <button class="btn-checkout" id="checkoutBtn">
+              <i class="fa-solid fa-credit-card"></i> Thanh toán
+            </button>
+            <button class="btn-continue-shopping" id="continueShoppingBtn">
+              <i class="fa-solid fa-arrow-left"></i> Tiếp tục mua hàng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Xem Đơn Hàng -->
+  <div id="ordersModal" class="modal" role="dialog" aria-labelledby="ordersTitle" aria-hidden="true">
+    <div class="modal-content" style="max-width: 900px;">
+      <button class="modal-close" aria-label="Đóng danh sách đơn hàng">&times;</button>
+      <div class="modal-body orders-modal-body">
+        <h2 id="ordersTitle" style="color: #667eea; margin-top: 0;">📋 Danh Sách Đơn Hàng</h2>
+        
+        <div id="ordersEmpty" class="empty-message">
+          <i class="fa-solid fa-inbox"></i>
+          <p>Chưa có đơn hàng nào</p>
+        </div>
+        
+        <div id="ordersList" class="orders-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
