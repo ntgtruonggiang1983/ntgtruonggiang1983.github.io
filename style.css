@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #dbb921;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #1520bd;
+  margin-bottom: 20px;
+}
+
+.section {
+  background: #ade7d9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.contact {
+  width: 100%;
+}
+.contact {
+  background: #ffffff;
+  border-left: 6px solid #6a5acd; /* tím nổi bật */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact h2 {
+  color: #6a5acd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact p {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact i {
+  color: #6a5acd;
+  font-size: 18px;
+}
+.btn-call {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #6a5acd;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
