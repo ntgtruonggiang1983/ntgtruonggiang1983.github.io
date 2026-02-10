@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRUONGGIANG SHOP</title>
   <link rel="stylesheet" href="style.css">
   <!-- FONT AWESOME – BẮT BUỘC -->
@@ -19,13 +20,15 @@
     <!-- SEARCH BAR -->
 <div class="search-bar">
   <input
+    id="searchInput"
     type="text"
     placeholder="Tìm sản phẩm, thương hiệu và tên shop"
   />
-  <button>
+  <button onclick="searchProduct(event)">
     <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 </div>
+
 
 
     <!-- GIỎ HÀNG -->
@@ -47,62 +50,60 @@
   </header>
 
   <main class="container">
-    <section class="left">
-      <h1>Chào mừng đến<br><strong>TRUONGGIANG SHOP</strong> </h1>
-      <div class="action-box">
-  <a href="#sanpham" class="box buy">
-    ☰ Danh mục sản phẩm
-  </a>
-  <a href="#lienhe" class="box contact">
-    📞 Liên hệ chúng tôi
-  </a>
+  <section class="left">
+    <h1>Chào mừng đến<br><strong>TRUONGGIANG SHOP</strong></h1>
+    <div class="action-box">
+      <a href="#sanpham" class="box buy">☰ Danh mục sản phẩm</a>
+      <a href="#lienhe" class="box contact">📞 Liên hệ chúng tôi</a>
+    </div>
+  </section>
+</main>
 
-   </main>
    <section id="sanpham" class="products">
   <h2>Sản phẩm của chúng tôi</h2>
 
   <div class="product-list">
-    <div class="product-item">
+    <div class="product-card" data-name="de canh dong lanh">
       <h3>Dế cánh đông lạnh</h3>
       <p>Thực phẩm giàu đạm, đóng gói sạch sẽ.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="de sua dong lanh">
       <h3>Dế sữa đông lạnh</h3>
       <p>Thực phẩm giàu đạm, đóng gói sạch sẽ.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="canh ga dong lanh">
       <h3>Cánh gà đông lạnh</h3>
-      <p>Thịt tươi, phù hợp chiên – nướng.</p>
+      <p>Thịt tươi, phù hợp chiên, nướng.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="chan ga dong lanh">
       <h3>Chân gà đông lạnh</h3>
       <p>Dai ngon, thích hợp làm món ngâm sả tắc.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="dui ga dong lanh">
       <h3>Đùi gà đông lạnh</h3>
       <p>Đùi gà to, thịt chắc, giá tốt.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="chan ga dong lanh">
       <h3>Chân gà đông lạnh</h3>
       <p>Thực phẩm giàu đạm, đóng gói sạch sẽ.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="chan ga rut xuong">
       <h3>Chân gà rút xương</h3>
       <p>Thực phẩm giàu đạm, đóng gói sạch sẽ.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="bo vien chien">
       <h3>Bò viên chiên</h3>
       <p>Thực phẩm giàu đạm, đóng gói sạch sẽ.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="ca vien chien">
       <h3>Cá viên chiên</h3>
       <p>Cung cấp đạm (protein)
 Có canxi + khoáng (từ cá)
@@ -110,7 +111,7 @@ Dễ ăn, tiện lợi
 Phù hợp ăn vặt, bữa phụ.</p>
     </div>
 
-    <div class="product-item">
+    <div class="product-card" data-name="xuc xich cac loai">
       <h3>Xúc xích các loại</h3>
       <p>Thực phẩm giàu đạm, đóng gói sạch sẽ.</p>
     </div>
@@ -129,7 +130,6 @@ Phù hợp ăn vặt, bữa phụ.</p>
 
 <script>
 function searchProduct(event) {
-  event.preventDefault();
 
   const keyword = document
     .getElementById("searchInput")

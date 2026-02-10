@@ -279,7 +279,7 @@ main {
   gap: 20px;
 }
 
-.product-item {
+.product-card {
   background: white;
   padding: 20px;
   border-radius: 14px;
@@ -425,4 +425,39 @@ main {
 
 .product-card {
   transition: all 0.3s ease;
+}
+
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.product-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
