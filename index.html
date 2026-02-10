@@ -20,10 +20,12 @@
     <!-- SEARCH BAR -->
 <div class="search-bar">
   <input
-    id="searchInput"
-    type="text"
-    placeholder="Tìm sản phẩm, thương hiệu và tên shop"
-  />
+  id="searchInput"
+  type="text"
+  placeholder="Tìm sản phẩm, thương hiệu và tên shop"
+  onkeydown="if(event.key === 'Enter') searchProduct()"
+/>
+
   <button onclick="searchProduct(event)">
     <i class="fa-solid fa-magnifying-glass"></i>
   </button>
@@ -129,8 +131,7 @@ Phù hợp ăn vặt, bữa phụ.</p>
 
 
 <script>
-function searchProduct(event) {
-
+function searchProduct() {
   const keyword = document
     .getElementById("searchInput")
     .value
@@ -140,10 +141,18 @@ function searchProduct(event) {
   const products = document.querySelectorAll(".product-card");
   let found = false;
 
-  products.forEach((product) => {
-    const name = product.dataset.name;
+  // Nếu chưa nhập gì → hiện lại tất cả
+  if (keyword === "") {
+    products.forEach(p => p.style.display = "block");
+    return;
+  }
 
-    if (name.includes(keyword) && keyword !== "") {
+  products.forEach((product) => {
+    const dataName = (product.dataset.name || "").toLowerCase();
+    const title = product.querySelector("h3").innerText.toLowerCase();
+
+    // Tìm theo data-name HOẶC theo tiêu đề h3
+    if (dataName.includes(keyword) || title.includes(keyword)) {
       product.style.display = "block";
 
       if (!found) {
@@ -158,14 +167,8 @@ function searchProduct(event) {
     }
   });
 
-  if (!found && keyword !== "") {
+  if (!found) {
     alert("❌ Không tìm thấy sản phẩm phù hợp");
-  }
-
-  if (keyword === "") {
-    products.forEach((product) => {
-      product.style.display = "block";
-    });
   }
 }
 </script>
