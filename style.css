@@ -308,12 +308,6 @@ main {
 .box {
   text-decoration: none;
 }
-.nav-right {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 .nav-right {
   display: flex;
@@ -460,4 +454,33 @@ main {
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .cart-link,
+  .order-link {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
 }
